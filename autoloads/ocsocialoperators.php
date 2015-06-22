@@ -34,7 +34,7 @@ class OCSocialOperators
             {
                 $string = str_replace( '[', '<strong>', $operatorValue );
                 $string = str_replace( ']', '</strong>', $string );
-                return $string;
+                $operatorValue = $string;
             } break;
 
             case 'objectstate_by_id';
