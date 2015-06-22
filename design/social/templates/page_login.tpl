@@ -1,0 +1,1 @@
+{include uri='design:social_user/login_form.tpl'}
