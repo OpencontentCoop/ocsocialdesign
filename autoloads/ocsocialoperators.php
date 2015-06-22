@@ -32,7 +32,9 @@ class OCSocialOperators
 
             case 'bracket_to_strong':
             {
-                $operatorValue = ObjectHandlerServiceControlSensor::replaceBracket( $operatorValue );
+                $string = str_replace( '[', '<strong>', $operatorValue );
+                $string = str_replace( ']', '</strong>', $string );
+                return $string;
             } break;
 
             case 'objectstate_by_id';
@@ -45,5 +47,6 @@ class OCSocialOperators
                 }
             } break;
         }
+        return false;
     }
 } 

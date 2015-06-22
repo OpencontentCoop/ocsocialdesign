@@ -18,7 +18,7 @@
     objectname_filter, $view_parameters.namefilter ) ) }
 
     <div class="attribute-header">
-      <h1 class="long"><a href={"sensor/config"|ezurl}>{$node_name|wash}</a>&nbsp;-&nbsp;{'Sub items [%children_count]'|i18n( 'design/standard/websitetoolbar/sort',, hash( '%children_count', $children_count ) )}</h1>
+      <h1 class="long"><a href={"social_user/config"|ezurl}>{$node_name|wash}</a>&nbsp;-&nbsp;{'Sub items [%children_count]'|i18n( 'design/standard/websitetoolbar/sort',, hash( '%children_count', $children_count ) )}</h1>
     </div>
 
     {if $children}

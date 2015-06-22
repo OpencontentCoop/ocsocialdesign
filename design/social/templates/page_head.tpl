@@ -13,7 +13,7 @@
     {ezcss_load( array(
         'animate.css',
         'style.css',
-        'sensor.css',
+        'custom.css',
         'font-awesome.min.css',
         'font-awesome-animation.min.css',
         'debug.css',
