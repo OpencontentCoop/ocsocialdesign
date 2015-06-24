@@ -11,8 +11,9 @@
 
     {include uri='design:page_header.tpl'}
 
-    {include uri='design:page_banner.tpl'}
 {/cache-block}
+
+    {include uri='design:page_banner.tpl'}
 
 <div class="main">
     <div class="container">

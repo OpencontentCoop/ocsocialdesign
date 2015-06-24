@@ -18,7 +18,11 @@ class OCSocialOperators
 
     function namedParameterList()
     {
-        return array();
+        return array(
+            'social_pagedata' => array(
+                'context' => array( 'type' => 'string', 'required' => false, 'default' => null )
+            )
+        );
     }
 
     function modify( $tpl, $operatorName, $operatorParameters, $rootNamespace, $currentNamespace, &$operatorValue, $namedParameters )
@@ -27,7 +31,7 @@ class OCSocialOperators
         {
             case 'social_pagedata':
             {
-                $operatorValue = OCSocialPageDataBase::instance();
+                $operatorValue = OCSocialPageDataBase::instance( $namedParameters['context'] );
             } break;
 
             case 'bracket_to_strong':

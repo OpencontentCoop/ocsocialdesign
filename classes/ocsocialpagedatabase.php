@@ -13,13 +13,42 @@ class OCSocialPageDataBase implements OCPageDataHandlerInterface
         $this->handler = $handler;
     }
 
-    public static function instance()
+    public static function findContext()
+    {
+        if ( eZINI::instance( 'social_design.ini' )->hasVariable( 'GeneralSettings', 'AvailableContext' ) )
+        {
+            $availableContext = (array)eZINI::instance( 'social_design.ini' )->variable( 'GeneralSettings', 'AvailableContext' );
+            foreach ( $availableContext as $context )
+            {
+                if ( eZINI::instance( 'social_design.ini' )->hasGroup( 'ContextSettings_' . $context ) )
+                {
+                    $contextSettings = (array)eZINI::instance( 'social_design.ini' )->group( 'ContextSettings_' . $context );
+                    $currentSiteAccess = eZSiteAccess::current();
+                    if ( strpos( $currentSiteAccess['name'], $contextSettings['MatchSiteaccessName'] ) !== false )
+                    {
+                        return $contextSettings['Identifier'];
+                    }
+                }
+            }
+        }
+        return null;
+    }
+
+    public static function instance( $context = null )
     {
         $handler = null;
-        if ( eZINI::instance( 'social_design.ini' )->hasVariable( 'GeneralSettings', 'PageDataHandler' ) )
+        if ( $context === null )
         {
-            $className = eZINI::instance( 'social_design.ini' )->variable( 'GeneralSettings', 'PageDataHandler' );
-            $handler = new $className();
+            $context = self::findContext();
+        }
+        if ( $context && eZINI::instance( 'social_design.ini' )->hasVariable( 'GeneralSettings', 'PageDataHandler' ) )
+        {
+            $handlers = eZINI::instance( 'social_design.ini' )->variable( 'GeneralSettings', 'PageDataHandler' );
+            if ( isset( $handlers[$context] ) )
+            {
+                $className = $handlers[$context];
+                $handler = new $className();
+            }
         }
         return new OCSocialPageDataBase( $handler );
     }
