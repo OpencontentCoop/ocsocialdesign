@@ -10,7 +10,7 @@
   <dt>{"Username"|i18n("social_user/user_edit")}</dt>
   <dd>{$userAccount.login|wash}</dd>
   
-  <dt>{"Email"|i18n("social_user/user_edit")}</dt>
+  <dt>{'Indirizzo Email'|i18n('social_user/signin')}</dt>
   <dd>{$userAccount.email|wash()}</dd>
   
   <dt>{"Name"|i18n("social_user/user_edit")}</dt>
