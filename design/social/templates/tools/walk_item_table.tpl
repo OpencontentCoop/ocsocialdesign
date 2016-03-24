@@ -28,6 +28,8 @@
   <td width="1">
     {if and( $item.children|count()|gt(0), is_set( $insert_child_class ) )}
       <a title="{'Aggiungi'|i18n('social_user/config')}  {$item.children[0].node.class_name} in {$item.node.name|wash()}" href="{concat('openpa/add/', $item.children[0].node.class_identifier, '/?parent=',$item.node.node_id)|ezurl(no)}"><i class="fa fa-plus"></i></a>
+    {elseif and( is_set( $child_class ), is_set( $insert_child_class ) )}
+      <a title="{'Aggiungi'|i18n('social_user/config')}  {$child_class.name} in {$item.node.name|wash()}" href="{concat('openpa/add/', $child_class.identifier, '/?parent=',$item.node.node_id)|ezurl(no)}"><i class="fa fa-plus"></i></a>
     {elseif is_set( $insert_child_class )|not()}
       <a title="{'Aggiungi'|i18n('social_user/config')} {$item.node.class_name} in {$item.node.name|wash()}" href="{concat('openpa/add/', $item.node.class_identifier, '/?parent=',$item.node.node_id)|ezurl(no)}"><i class="fa fa-plus"></i></a>
     {/if}
