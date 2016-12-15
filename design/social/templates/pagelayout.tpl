@@ -1,5 +1,5 @@
 {def $user_hash  = concat( $current_user.role_id_list|implode( ',' ), ',', $current_user.limited_assignment_value_list|implode( ',' ) )}
-{cache-block expiry=86400 keys=array( $current_user.contentobject_id, $module_result.uri, $user_hash )}
+{cache-block keys=array( $current_user.contentobject_id, $module_result.uri, $user_hash )}
 {def $social_pagedata = social_pagedata()}
 <!doctype html>
 <html class="no-js" lang="en">
@@ -25,7 +25,7 @@
 
     </div>
 
-{cache-block expiry=86400 keys=array( $user_hash )}
+{cache-block keys=array( $user_hash )}
 
     {if is_set( $social_pagedata )|not()}{def $social_pagedata = social_pagedata()}{/if}
     <footer>
