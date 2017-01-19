@@ -56,6 +56,7 @@
 </div>
 {/cache-block}
 
+{if is_set($social_pagedata)|not()}{def $social_pagedata = social_pagedata()}{/if}
 {if $social_pagedata.google_analytics_id}
     <script type="text/javascript">
         var _gaq = _gaq || [];
