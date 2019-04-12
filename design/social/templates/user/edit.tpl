@@ -18,8 +18,13 @@
   
 </dl>
   
-  
+
 <input class="button btn btn-info" type="submit" name="EditButton" value="{'Modifica profilo'|i18n('social_user/user_edit')}" />
-<input class="button btn btn-info" type="submit" name="ChangePasswordButton" value="{'Cambia la password'|i18n('social_user/user_edit')}" />
+  {if ezmodule( 'userpaex' )}
+    <a class="button btn btn-info" href="{concat("userpaex/password/",$userID)|ezurl(no)}">{'Cambia la password'|i18n('social_user/user_edit')}</a>
+  {else}
+    <input class="button btn btn-info" type="submit" name="ChangePasswordButton" value="{'Cambia la password'|i18n('social_user/user_edit')}" />
+  {/if}
+
 
 </form>
