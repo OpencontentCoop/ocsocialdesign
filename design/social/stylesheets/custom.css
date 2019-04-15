@@ -326,3 +326,35 @@ div.alert p{margin-bottom: 10px !important}
     text-align: center;
     width: 100%;
 }
+.dashboard .panel {
+    position: relative;
+    padding-top: 40px;
+}
+.dashboard .panel h2 {
+    background: #555;
+    color: #fff;
+    font-size: 1.5em;
+    left: 0;
+    margin: 0;
+    padding: 10px;
+    position: absolute;
+    top: 0;
+    border-bottom-right-radius: 4px;
+}
+.table, table.list {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 21px;
+}
+table.list > thead > tr > th,
+table.list > thead > tr > td,
+table.list > tbody > tr > th,
+table.list > tbody > tr > td,
+table.list > tfoot > tr > th,
+table.list > tfoot > tr > td {
+    padding: 8px;
+    line-height: 1.42857;
+    vertical-align: top;
+    border-top: 1px solid #ddd;
+
+}
