@@ -47,7 +47,7 @@
       <li>
         <a href="#login">
           <span class="label label-primary" style="font-size: 100%">
-              {'Accedi'|i18n('ocsocialdesign/menu')}
+              {'Login'|i18n('ocsocialdesign/menu')}
           </span>
         </a>
       </li>

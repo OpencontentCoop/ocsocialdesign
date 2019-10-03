@@ -19,7 +19,7 @@
     <form class="validate-form" method="post" action={"/user/login/"|ezurl} name="loginform">
       <div class='form-group'>
         <div class='controls with-icon-over-input'>          
-          <input type="text" autofocus="" autocomplete="off" name="Login" placeholder="{'Indirizzo Email'|i18n('social_user/signin')}" class="form-control" data-rule-required="true" value="{$User:login|wash}">
+          <input type="text" autofocus="" autocomplete="off" name="Login" placeholder="{'Email address'|i18n('social_user/signin')}" class="form-control" data-rule-required="true" value="{$User:login|wash}">
           <i class='icon-user text-muted'></i>
         </div>
       </div>
@@ -36,7 +36,7 @@
         </label>
       </div>
       *}
-      <button class='btn btn-lg btn-primary center-block' name="LoginButton">{'Accedi'|i18n('social_user/signin')}</button>
+      <button class='btn btn-lg btn-primary center-block' name="LoginButton">{'Login'|i18n('social_user/signin')}</button>
       
       {if and( is_set( $User:post_data ), is_array( $User:post_data ) )}
         {foreach $User:post_data as $key => $postData}
@@ -49,9 +49,9 @@
     <div class='text-center'>
       <hr class='hr-normal'>
       {if ezmodule( 'userpaex' )}
-        <a href={'/userpaex/forgotpassword'|ezurl}>{'Hai dimenticato la password?'|i18n('social_user/signin')}</a>
+        <a href={'/userpaex/forgotpassword'|ezurl}>{'Did you forget your password?'|i18n('social_user/signin')}</a>
       {else}
-        <a href={'/user/forgotpassword'|ezurl}>{'Hai dimenticato la password?'|i18n('social_user/signin')}</a>
+        <a href={'/user/forgotpassword'|ezurl}>{'Did you forget your password?'|i18n('social_user/signin')}</a>
       {/if}
     </div>
   </div>

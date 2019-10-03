@@ -42,8 +42,8 @@
 
 
 <div class="buttonblock">
-{include uri="design:gui/button.tpl" name=Discard id_name=CancelButton value="Annulla"|i18n("social_user/dashboard")}
-{include uri="design:gui/defaultbutton.tpl" name=Store id_name=ConfirmButton value="Elimina gli elementi"|i18n("social_user/dashboard") disabled=$exceeded_limit}
+{include uri="design:gui/button.tpl" name=Discard id_name=CancelButton value="Cancel"|i18n("social_user/dashboard")}
+{include uri="design:gui/defaultbutton.tpl" name=Store id_name=ConfirmButton value="Delete items"|i18n("social_user/dashboard") disabled=$exceeded_limit}
 </div>
 
 </form>

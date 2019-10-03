@@ -5,26 +5,26 @@
     <name>ocsocialdesign</name>
     <message>
       <source>Cookies help us to deliver quality services. By using our services, you agree to our use of cookies mode.</source>
-      <translation>Cookies helfen uns, die Qualität der Dienstleistungen zu liefern. Nutzung unserer Dienste erklären Sie sich mit unserer Art der Verwendung von Cookies.</translation>
+      <translation>I cookie ci aiutano ad erogare servizi di qualità. Utilizzando i nostri servizi, l'utente accetta le nostre modalità d'uso dei cookie.</translation>
     </message>
     <message>
       <source>OK</source>
-      <translation>Ok</translation>
+      <translation>OK</translation>
     </message>
     <message>
       <source>More information</source>
-      <translation>mehr Informationen</translation>
+      <translation>Maggiori informazioni</translation>
     </message>
     <message>
       <source>Contacts</source>
-      <translation>Kontakte</translation>
+      <translation>Contatti</translation>
     </message>
   </context>
   <context>
     <name>ocsocialdesign/menu</name>
     <message>
       <source>Login</source>
-      <translation>Einloggen</translation>
+      <translation>Accedi</translation>
     </message>
   </context>
 </TS>
