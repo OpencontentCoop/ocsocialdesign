@@ -5,7 +5,7 @@
     <name>ocsocialdesign</name>
     <message>
       <source>Cookies help us to deliver quality services. By using our services, you agree to our use of cookies mode.</source>
-      <translation>Τα cookies μας βοηθούν να προσφέρει υπηρεσίες υψηλής ποιότητας. Χρησιμοποιώντας τις υπηρεσίες μας, συμφωνείτε με τη χρήση των cookies λειτουργία.</translation>
+      <translation>Ta cookies μας βοηθούν να σας παρέχουμε καλύτερες υπηρεσίες. Χρησιμοποιώντας τις υπηρεσίες μας συμφωνείτε στη χρήση των cookies.</translation>
     </message>
     <message>
       <source>OK</source>
@@ -17,7 +17,7 @@
     </message>
     <message>
       <source>Contacts</source>
-      <translation>Επαφές</translation>
+      <translation>Επικοινωνια</translation>
     </message>
   </context>
   <context>
