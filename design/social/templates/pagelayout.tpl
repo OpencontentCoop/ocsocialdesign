@@ -49,7 +49,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-sm-12 col-md-12">
-                        &copy; {currentdate()|datetime('custom', '%Y')} {$social_pagedata.text_credits|wash()}
+                        &copy; {currentdate()|datetime('custom', '%Y')} {$social_pagedata.text_credits}
                     </div>
                 </div>
             </div>
