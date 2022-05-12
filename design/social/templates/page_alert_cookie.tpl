@@ -1,3 +1,4 @@
+{*
 {ezscript_require(array('cookiechoices.js'))}
 <script>
     document.addEventListener('DOMContentLoaded', function(event) {ldelim}
@@ -9,3 +10,4 @@
         );
     {rdelim});
 </script>
+*}
