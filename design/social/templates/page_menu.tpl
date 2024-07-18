@@ -45,7 +45,7 @@
     {if $current_user.is_logged_in|not()}
 
       <li>
-        <a href="#login">
+        <a href="{'user/login'|ezurl(no)}">
           <span class="label label-primary" style="font-size: 100%">
               {'Login'|i18n('ocsocialdesign/menu')}
           </span>
